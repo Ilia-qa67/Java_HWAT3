@@ -11,7 +11,7 @@ public class OrderTest {
     @Test
     public void shouldTest() {
 
-        open("http://localhost:7777/");
+        open("http://localhost:9999/");
         $("[data-test-id=name] input").setValue("Василий Панкратов-Черный");
         $("[data-test-id=phone] input").setValue("+79990000000");
         $("[data-test-id=agreement]").click();
@@ -23,7 +23,7 @@ public class OrderTest {
     @Test
     public void shouldNotTestName() {
 
-        open("http://localhost:7777/");
+        open("http://localhost:9999/");
         $("[data-test-id=name] input").setValue("Vasiliy");
         $("[data-test-id=phone] input").setValue("+79990000000");
         $("[data-test-id=agreement]").click();
@@ -34,7 +34,7 @@ public class OrderTest {
     @Test
     public void shouldNotTestNameIfNull() {
 
-        open("http://localhost:7777/");
+        open("http://localhost:9999/");
         $("[data-test-id=name] input").setValue("");
         $("[data-test-id=phone] input").setValue("+79990000000");
         $("[data-test-id=agreement]").click();
@@ -45,7 +45,7 @@ public class OrderTest {
     @Test
     public void shouldNotTestPhone() {
 
-        open("http://localhost:7777/");
+        open("http://localhost:9999/");
         $("[data-test-id=name] input").setValue("Василий Панкратов-Черный");
         $("[data-test-id=phone] input").setValue("+712345");
         $("[data-test-id=agreement]").click();
@@ -56,7 +56,7 @@ public class OrderTest {
     @Test
     public void shouldNotTestPhoneIfNull() {
 
-        open("http://localhost:7777/");
+        open("http://localhost:9999/");
         $("[data-test-id=name] input").setValue("Василий Панкратов-Черный");
         $("[data-test-id=phone] input").setValue("");
         $("[data-test-id=agreement]").click();
@@ -67,7 +67,7 @@ public class OrderTest {
     @Test
     public void shouldNotTestIfAgreementNotClicked() {
 
-        open("http://localhost:7777/");
+        open("http://localhost:9999/");
         $("[data-test-id=name] input").setValue("Василий Панкратов-Черный");
         $("[data-test-id=phone] input").setValue("+79770000000");
         $("button").click();
